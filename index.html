@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-
+<!--  <base href="/">-->
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -23,31 +23,26 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="mobevace">
+  <meta name="apple-mobile-web-app-title" content="mobex">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>mobevace</title>
+  <title>mobex</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "923418664";
+    const serviceWorkerVersion = "1130541600";
   </script>
-
-  ...
-
+  <!-- This script adds the flutter initialization JS code -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="main.dart.js" type="application/javascript"></script>
-
-
-  <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -62,22 +57,31 @@
         }
       });
     });
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+
+
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
-  apiKey: "AIzaSyBKBDKlfEJ6sngWv4zN0FXIAREV5DiuI8E",
-  authDomain: "mobevac-a7fde.firebaseapp.com",
-  databaseURL: "https://mobevac-a7fde-default-rtdb.firebaseio.com",
-  projectId: "mobevac-a7fde",
-  storageBucket: "mobevac-a7fde.appspot.com",
-  messagingSenderId: "587846638553",
-  appId: "1:587846638553:web:7f5dbb4a8b2f22259217c8",
-  measurementId: "G-GYM4Z5PE8T"
-};
+      apiKey: "AIzaSyD9ZtknvYh55suxLXhZ3VI-dbiG2CmUqng",
+      authDomain: "latpro-315b7.firebaseapp.com",
+      projectId: "latpro-315b7",
+      storageBucket: "latpro-315b7.appspot.com",
+      messagingSenderId: "28724327328",
+      appId: "1:28724327328:web:154334e71047cee25aeac5",
+      measurementId: "G-CRCEPB6HSY"
+    };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
